@@ -1,0 +1,24 @@
+
+{
+  "short_name": "LinuxCMD",
+  "name": "Linux Command Master",
+  "icons": [
+    {
+      "src": "/icon-192x192.png",
+      "type": "image/png",
+      "sizes": "192x192",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/icon-512x512.png",
+      "type": "image/png",
+      "sizes": "512x512",
+      "purpose": "any maskable"
+    }
+  ],
+  "start_url": "/",
+  "display": "standalone",
+  "theme_color": "#1a202c",
+  "background_color": "#1a202c",
+  "description": "An interactive tutorial app for learning Linux commands."
+}

@@ -1,0 +1,5 @@
+{
+  "name": "Linux Command Master",
+  "description": "An interactive tutorial app that guides users through beginner, intermediate, and advanced Linux commands, while tracking and displaying their learning progress.",
+  "requestFramePermissions": []
+}
