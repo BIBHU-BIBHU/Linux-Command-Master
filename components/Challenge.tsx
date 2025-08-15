@@ -53,7 +53,7 @@ const QuizQuestion: React.FC<{
         ))}
       </div>
       {isAnswered && selectedAnswer !== answer && (
-        <p className="text-xs text-green-400 mt-2">Correct answer: {answer}</p>
+        <p className="text-xs text-green-500 mt-2">Correct answer: {answer}</p>
       )}
     </div>
   );
@@ -132,11 +132,11 @@ const Challenge: React.FC = () => {
                     <ProgressBar percentage={percentage} />
                 </div>
                 {percentage >= 80 ? (
-                    <p className="mt-4 text-lg text-green-400 font-semibold">Congratulations! You're a true command-line master!</p>
+                    <p className="mt-4 text-lg text-green-600 font-semibold">Congratulations! You're a true command-line master!</p>
                 ) : (
-                    <p className="mt-4 text-lg text-yellow-400 font-semibold">Great effort! Keep practicing to master them all.</p>
+                    <p className="mt-4 text-lg text-yellow-600 font-semibold">Great effort! Keep practicing to master them all.</p>
                 )}
-                <button onClick={resetQuiz} className="mt-6 px-6 py-2 bg-brand-accent text-brand-bg font-semibold rounded-lg hover:bg-teal-300 transition-colors">
+                <button onClick={resetQuiz} className="mt-6 px-6 py-2 bg-brand-accent text-white font-semibold rounded-lg hover:bg-teal-600 transition-colors">
                     Try Again
                 </button>
             </div>
@@ -147,12 +147,12 @@ const Challenge: React.FC = () => {
         return (
              <div className="bg-brand-surface rounded-lg p-6 shadow-lg animate-fade-in">
                 <div className="flex items-center gap-3 mb-4">
-                    <TargetIcon className="w-6 h-6 text-red-400" />
+                    <TargetIcon className="w-6 h-6 text-red-500" />
                     <h3 className="text-xl font-bold text-brand-text">Daily Challenge Quiz</h3>
                 </div>
                 <div className="space-y-2">
                     {activeChallenges.map(challenge => (
-                        <div key={challenge.command} className="bg-brand-primary/30 rounded-lg">
+                        <div key={challenge.command} className="bg-brand-primary/60 rounded-lg">
                             <button 
                                 onClick={() => setOpenCommand(prev => prev === challenge.command ? null : challenge.command)} 
                                 className="w-full flex justify-between items-center text-left p-3"
@@ -180,7 +180,7 @@ const Challenge: React.FC = () => {
                         <button 
                             onClick={handleSubmit} 
                             disabled={answeredCount < totalQuestions} 
-                            className="w-full px-6 py-3 bg-brand-accent text-brand-bg font-semibold rounded-lg hover:bg-teal-300 transition-all disabled:bg-brand-primary disabled:cursor-not-allowed disabled:text-brand-subtle"
+                            className="w-full px-6 py-3 bg-brand-accent text-white font-semibold rounded-lg hover:bg-teal-600 transition-all disabled:bg-brand-primary disabled:cursor-not-allowed disabled:text-brand-subtle"
                         >
                             See My Score
                         </button>
@@ -194,7 +194,7 @@ const Challenge: React.FC = () => {
     return (
         <div className="bg-brand-surface rounded-lg p-6 shadow-lg flex flex-col justify-center">
             <div className="flex items-center gap-3 mb-4">
-                <TargetIcon className="w-6 h-6 text-red-400" />
+                <TargetIcon className="w-6 h-6 text-red-500" />
                 <h3 className="text-xl font-bold text-brand-text">Daily Challenge Quiz</h3>
             </div>
             <p className="text-brand-subtle mb-6 text-center">
@@ -202,7 +202,7 @@ const Challenge: React.FC = () => {
             </p>
             <button 
                 onClick={startQuiz}
-                className="w-full px-6 py-3 bg-brand-accent text-brand-bg font-semibold rounded-lg hover:bg-teal-300 transition-all transform hover:-translate-y-1"
+                className="w-full px-6 py-3 bg-brand-accent text-white font-semibold rounded-lg hover:bg-teal-600 transition-all transform hover:-translate-y-1"
             >
                 Start Challenge
             </button>

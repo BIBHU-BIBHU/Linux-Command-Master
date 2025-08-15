@@ -195,7 +195,7 @@ const TimelineItem: React.FC<{
           className={`grid transition-all duration-500 ease-in-out ${isOpen ? 'grid-rows-[1fr] opacity-100 pt-4' : 'grid-rows-[0fr] opacity-0'}`}
         >
           <div className="overflow-hidden">
-            <div className="prose prose-invert max-w-none prose-p:text-brand-subtle prose-strong:text-brand-text prose-li:text-brand-subtle prose-headings:text-brand-accent prose-code:text-green-400 prose-code:font-mono">
+            <div className="prose max-w-none prose-p:text-brand-subtle prose-strong:text-brand-text prose-li:text-brand-subtle prose-headings:text-brand-accent prose-code:text-emerald-600 prose-code:font-mono">
               {children}
             </div>
           </div>

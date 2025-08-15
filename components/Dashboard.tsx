@@ -17,10 +17,10 @@ interface DashboardProps {
 }
 
 const levelColors: Record<Level, string> = {
-  'Beginner': 'text-green-400',
-  'Intermediate': 'text-yellow-400',
-  'Advanced': 'text-red-400',
-  'Expert': 'text-purple-400',
+  'Beginner': 'text-green-500',
+  'Intermediate': 'text-yellow-500',
+  'Advanced': 'text-red-500',
+  'Expert': 'text-purple-500',
 };
 
 const levelDescriptions: Record<Level, string> = {

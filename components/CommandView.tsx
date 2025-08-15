@@ -38,11 +38,11 @@ const CommandView: React.FC<CommandViewProps> = ({ level, command, onBack }) => 
 
       <div className="bg-brand-surface rounded-lg p-6 sm:p-8 shadow-lg">
         {!tutorial ? (
-          <div className="text-yellow-400 text-center p-4 bg-yellow-900/50 rounded-lg">
+          <div className="text-yellow-800 text-center p-4 bg-yellow-100 rounded-lg">
             Tutorial for "<strong>{command}</strong>" is not available yet.
           </div>
         ) : (
-          <div className="prose prose-invert max-w-none prose-p:text-brand-subtle prose-headings:text-brand-text prose-strong:text-brand-text">
+          <div className="prose max-w-none prose-p:text-brand-subtle prose-headings:text-brand-text prose-strong:text-brand-text">
             <h2>{tutorial.commandName}</h2>
             <p className="text-lg italic text-brand-accent">{tutorial.summary}</p>
             <div dangerouslySetInnerHTML={{ __html: marked.parse(tutorial.description) }} />
@@ -52,7 +52,7 @@ const CommandView: React.FC<CommandViewProps> = ({ level, command, onBack }) => 
               {tutorial.examples.map((example, index) => (
                 <div key={index} className="bg-brand-bg p-4 rounded-lg border border-brand-primary">
                   <pre className="bg-transparent p-0 m-0 overflow-x-auto">
-                    <code className="text-green-400 font-mono">{example.command}</code>
+                    <code className="text-emerald-600 font-mono">{example.command}</code>
                   </pre>
                   <p className="mt-2 text-sm text-brand-subtle">{example.explanation}</p>
                 </div>
@@ -66,7 +66,7 @@ const CommandView: React.FC<CommandViewProps> = ({ level, command, onBack }) => 
                 className={`flex items-center gap-2 px-6 py-3 rounded-lg font-semibold transition-all duration-300
                   ${completed
                     ? 'bg-green-600 text-white cursor-not-allowed'
-                    : 'bg-brand-accent text-brand-bg hover:bg-teal-300 transform hover:-translate-y-1'
+                    : 'bg-brand-accent text-white hover:bg-teal-600 transform hover:-translate-y-1'
                   }`}
               >
                 <CheckIcon className="w-5 h-5" />
